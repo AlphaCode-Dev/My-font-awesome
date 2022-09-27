@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.glowing-icons ul {
+  display: flex;
+  gap: 0 1rem;
+  list-style-type: none;
+}
+
+.glowing-icons a {
+  position: relative;
+  background: #202020;
+  text-decoration: none;
+  border-radius: 50%;
+  color: #808080;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+}
+
+.glowing-icons i {
+  font-size: 2.5rem;
+}
+
+.glowing-icons a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee00;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.glowing-icons a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee00;
+}
+
+.glowing-icons a:hover {
+  color: #ffee00;
+}
